@@ -1,13 +1,26 @@
-// Next.js API route support: https://nextjs.org/docs/api-routes/introduction
-import type { NextApiRequest, NextApiResponse } from 'next'
+import { NextApiRequest, NextApiResponse } from 'next';
+import { PrismaClient } from '@prisma/client';
 
-type Data = {
-  name: string
-}
+const prisma = new PrismaClient();
 
-export default function handler(
-  req: NextApiRequest,
-  res: NextApiResponse<Data>
-) {
-  res.status(200).json({ name: 'John Doe' })
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  try {
+    const numeros = await prisma.jogoDoBicho.findMany();
+
+    if (numeros.length === 0) {
+      res.json({ numero: null, nome: null });
+      return;
+    }
+
+    const numeroAleatorio = Math.floor(Math.random() * numeros.length);
+    const numero = numeros[numeroAleatorio].numero;
+    const nome = numeros[numeroAleatorio].nome;
+
+    res.json({ numero, nome });
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ error: 'Ocorreu um erro no servidor' });
+  } finally {
+    await prisma.$disconnect();
+  }
 }

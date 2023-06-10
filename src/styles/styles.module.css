@@ -1,0 +1,46 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 60vh; /* Ajuste a altura conforme necessário */
+  width: 40%; /* Ajuste a largura conforme necessário */
+  border: none;
+  padding: 20px;
+  border-radius: 8px;
+  background-color: transparent;
+  margin: 0 auto; /* Centraliza horizontalmente */
+  margin-top: 13vh; /* Ajuste o espaçamento vertical conforme necessário */
+}
+
+.custom-navbar {
+  width: 80%;
+}
+
+
+.container > h1 {
+  font-size: 25px;
+  margin-bottom: 10px;
+  border: none;
+}
+
+
+.custom-green {
+  color: #00ff00; /* Cor verde personalizada */
+}
+
+.container > p {
+  font-size: 25px;
+  border: none;
+}
+
+
+.content {
+  margin: 0 auto;
+  max-width: 400px;
+}
+
+.number-container {
+  border: none;
+}
+
