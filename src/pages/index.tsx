@@ -5,6 +5,7 @@ import Footer from '@/components/footer';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import styles from '../styles/styles.module.css';
+import Link from 'next/link';
 
 const IndexPage = () => {
   const router = useRouter();
@@ -46,16 +47,16 @@ const IndexPage = () => {
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
               <li className="nav-item">
-                <a
+                <Link
                   className={`nav-link ${router.pathname === '/' ? 'active' : ''}`}
                   aria-current="page"
                   href="/"
                   style={{ color: '#D3D3D3' }}
                 >
                   Home
-                </a>
+                </Link>
               </li>
-              {/* Adicione mais itens de menu aqui para outras páginas */}
+
             </ul>
           </div>
         </div>
