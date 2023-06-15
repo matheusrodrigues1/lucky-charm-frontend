@@ -15,7 +15,7 @@ const IndexPage = () => {
 
   const buscarNumeroAleatorio = async () => {
     try {
-      const response = await fetch('http://localhost:3000/numero-jogo-do-bicho');
+      const response = await fetch('https://lucky-charm-7c69fd01a680.herokuapp.com/numero-jogo-do-bicho');
       const data = await response.json();
       setNumero(data.numero);
       setNome(data.nome);
