@@ -2,19 +2,10 @@
 <p align="center">Gerador de Numeros Aleatórios</p>
 <p align="center">
      <a alt="NextJS">
-        <img alt="Static Badge" src="https://img.shields.io/badge/NextJS%20-%20black">
+        <img alt="Static Badge" src="https://img.shields.io/badge/NextJS-NextJS-black">
     </a>
     <a alt="Typescript">
         <img src="https://img.shields.io/badge/Typescript-Typescript-blue" />
-    </a>
-    <a alt="NodeJs">
-        <img src="https://img.shields.io/badge/NodeJs-NodeJs-green" />
-    </a>
-    <a alt="PostgreSQL">
-        <img alt="Static Badge" src="https://img.shields.io/badge/PostgresSQL-PostgreSQL-white">
-    </a>
-    <a alt="Prisma">
-        <img src="https://img.shields.io/badge/Prisma-Prisma-brightgreen" />
     </a>
     <a alt="Bootstrap">
         <img alt="Static Badge" src="https://img.shields.io/badge/Bootstrap-Bootstrap-yellow">
